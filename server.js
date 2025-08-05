@@ -13,6 +13,7 @@ mongoose.connect(process.env.MONGO_URI)
     .catch((err) => console.error("❌ MongoDB connection failed", err));
 // Routes
 app.get("/tasks", async (req, res) => {
+     res.send('✅ MERN backend is live and working!');
     const tasks = await Task.find();
     res.json(tasks);
 });
